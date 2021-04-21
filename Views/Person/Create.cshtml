@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-9">
+
+            @Html.Partial("/Views/Shared/Partial/_FormMessages.cshtml")
+
+            <div class="box box-primary ">
+                <div class="box-header with-border text-center">
+                    <h3 class="box-title ">Create Person</h3>
+                </div>
+                @using (Html.BeginForm("Create", "Person", FormMethod.Post))
+                {
+                    @Html.Partial("Partial/_PersonForm")
+                }
+            </div>
+        </div>
+    </div>
+</section>

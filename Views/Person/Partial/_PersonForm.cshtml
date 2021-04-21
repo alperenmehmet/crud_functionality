@@ -1,0 +1,24 @@
+﻿@model CRUDOperation_ASP.NET_Web_Application.Models.DTOs.PersonDTO
+
+<div class="box-body">
+    @*@Html.ValidationSummary()*@
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Name" })
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.LastName)
+        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", @placeholder = "Last Name" })
+        @Html.ValidationMessageFor(x => x.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.BirthDate)
+        @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control", @placeholder = "Birth Date" })
+        @Html.ValidationMessageFor(x => x.BirthDate)
+    </div>
+</div>
+<div class="box-footer">
+    @Html.ActionLink("Back To List", "List", "Person", new { @class = "btn btn-warning btn-md", @style = "float:left" })
+    <button type="submit" class="btn btn-primary btn-md" style="float:right">Create</button>
+</div>
